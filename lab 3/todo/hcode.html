@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDoList</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/4e6b50c3ce.js" crossorigin="anonymous"></script>
+        <link rel = "stylesheet" href="box.css">    
+        <style>
+            *{
+                cursor: url(images.png),auto;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href = "#">ToDo List</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class = "nav">
+                <h1><i class = "fas fa-clipboard-check"></i>ToDo List</h1>
+                <div class = "in">
+                    <input type = "text" placeholder="New Task">
+                    <button id="sss">Add</button>
+            </div>
+            <div id="tasks"></div>
+        </div>
+        <script>
+            document.querySelector('#sss').onclick=
+            function(){
+                if(document.querySelector('.in input').value.length==0){
+                alert("Plz push your tasks");
+            }
+            else{
+                document.querySelector('#tasks').innerHTML +=`<div class = "task"><span id ="taskname"><button class="bigs"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>
+                    ${document.querySelector('.in input').value}</span>
+                    <button class="delete"><i class = "fa fa-trash"></i></button></div>`;
+                var current_tasks = document.querySelectorAll('.delete');
+                for (var i= 0; i < current_tasks.length; i++) {
+                    current_tasks[i].onclick = function (){
+                        this.parentNode.remove();
+                    }
+                    
+                }
+                var tasks = document.querySelectorAll('#taskname');
+                for (var i= 0; i < tasks.length; i++) {
+                        tasks[i].onclick = function (){
+                            this.classList.toggle('bigs');
+                    }
+                    
+                }
+                document.querySelector('.in input').value="";
+            }
+        }</script>
+    </body>
+</html>

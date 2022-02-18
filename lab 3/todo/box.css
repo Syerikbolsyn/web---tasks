@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif&family=Syne+Tactile&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+nav{
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+}
+ul{
+    padding: 0;
+    margin:0 0 0 50px;
+    list-style: none;
+}
+li{
+    float:left;
+}
+nav a{
+    width: 100px;
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-family: Arial;
+    color:gray;
+    text-align: center;
+}
+nav a:hover{
+    background-color: purple;
+    transition: 0.5s;
+    text-transform: none;
+}
+.container{
+    margin-top: 50px;
+    border:1px solid white;
+    width: 70%;
+    margin-left:auto;
+}
+
+.nav h2{
+    font-size: 2rem;
+
+}
+.in{
+    margin-left: 73px;
+    border: 1px solid white;
+    width: 600px;
+    text-align: center;
+}
+#tasks{
+    padding: 20px 20px;
+    width: 70%;
+    position: relative;
+    margin-top: 10px;
+}
+.task{
+    background: #fff;
+    height:50px;
+    padding: 10px 10px;
+    border-radius: 0px;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d1d3d4;
+    
+}
+.task span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+.in input{
+    width: 80%;
+    outline:none;
+    padding: 8px;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+    border:1px solid lightgray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.in button{
+    margin-top: 40px;
+    margin-left: 35px;
+    padding: 8px;
+    width: fit-content;
+    transition: 1s;
+    margin-right: auto;
+    outline:none;
+    background-color: rgb(17, 146, 197);
+    color:white;
+    border: 1px solid lightgray;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#kex{
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.in button:hover{
+    background-color: purple;
+    color:lightgray;
+}
+.todo{
+    width: 500px;
+    margin:auto;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:auto;
+}
+.delete{
+    border:none;
+    background-color: white;
+    width: 20px;
+    margin-right: 20px;
+    color:red;
+    background-color: white;
+}
+.bigs{
+    text-decoration: line-through;
+    opacity: 0.7;
+    border:none;
+    color:BLUE;
+
+}
