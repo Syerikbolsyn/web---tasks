@@ -1,0 +1,40 @@
+<p>category-dress works!</p>
+<h2>Category: </h2>
+
+<div class="product-list-container">
+  <div *ngFor="let product of products">
+    <div *ngIf="product.category==1 " >
+    <img class="product-image" src="{{ product.image }}" alt="no image">
+    <h3>
+      <a
+        [title]="product.name + ' details'"
+        href="{{ product.url }}"
+        target="_blank">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+    <p *ngIf="product.price">
+      Price: {{ product.price }} $
+    </p>
+    <p *ngIf="product.rating">
+      Rating: {{ product.rating }} stars
+    </p>
+    <a href="https://t.me/share/url?url={{product.url}}&text={{product.name}}" target="_blank">
+      <button type="button" (click)="share()">
+        Share
+      </button>
+    </a>
+    <div *ngIf="show">
+      dsfsdfsdfsdfs
+    </div>
+    <button type="button" (click)="change()">
+      change
+    </button>
+
+    </div>
+  </div>
+</div>

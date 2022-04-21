@@ -1,0 +1,23 @@
+<p>home works!</p>
+<h2>Categories</h2>
+
+<div class="home-container">
+  <div *ngFor="let category of categories">
+
+    <img class="category-image" src="{{ category.image }}" alt="no image">
+    <h3>
+      <a
+        [title]="category.name + ' details'"
+        routerLink="/c{{category.id}}"
+        >
+            <button class="btn btn-primary" (click)="gotoHome()">{{ category.name }}</button>
+
+      </a>
+    </h3>
+<!--    <a routerLink="c"{{category.id}} >-->
+<!--    <button class="btn btn-primary" (click)="gotoHome()">{{ category.name }}</button>-->
+<!--    </a>-->
+
+
+  </div>
+</div>

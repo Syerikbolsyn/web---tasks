@@ -1,0 +1,7 @@
+~~~~~~~~~~~~~~~   python -m django startproject project_name
+in folder-project~~~~~~~~~~~ python manage.py runserver
+in folder-project~~~~~~~~~~~ python manage.py startapp app_name
+crete model migrtions ----------- python manage.py makemigrations
+migrtions ----------- python manage.py migrate
+create admin ~~~~~~~~~~~~~~~~~  python manage.py createsuperuser
+
